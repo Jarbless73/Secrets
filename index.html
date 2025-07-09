@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Buy quality raw materials for your poultry farm.">
+    <meta name="keywords" content="poultry, raw materials, broiler chicks, noiler chicks, feed">
+    <meta name="author" content="Poultry Raw Materials Store">
+    <title>Poultry Raw Materials - Buy & Ship</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #28a745;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: #343a40;
+        }
+        nav ul li {
+            padding: 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+        }
+        nav ul li a:hover {
+            background-color: #28a745;
+        }
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 20px;
+        }
+        .product-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            width: 250px;
+        }
+        .product-card img {
+            width: 100%;
+            height: auto;
+        }
+        .product-card button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .product-card button:hover {
+            background-color: #218838;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .form-container {
+            padding: 20px;
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+   .cart {
+    padding: 20px;
+    border: 1px solid #ccc;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-items p {
+    font-size: 1rem;
+    color: #333;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 600px) {
+    #cart {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+}
+
+    </style>
+
+
+<header>
+    <h1>market store</h1>
+<p>Buy quality poultry products @ pocket friendly price. <br>you can also market your poultry products here </p>if you have any poultry product to sale <br>contact us on<b>     08120397184</b>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#shipping">Shipping</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="products">
+        <h2>Available Products</h2>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="dayold.png" alt="Day old broiler chick">
+                <h3>Broiler chicks</h3>
+                <p>₦1100</p>
+                <label for="quantity1">Quantity:</label>
+                <input type="number" id="quantity1" min="1" value="1">
+                <button onclick="addToCart('Broiler chicks', 1100, document.getElementById('quantity1').value)">Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="day_old.png" alt="Day old noiler chick">
+                <h3>Noiler chicks</h3>
+                <p>₦950</p>
+                <label for="quantity2">Quantity:</label>
+                <input type="number" id="quantity2" min="1" value="1">
+                <button onclick="addToCart('Noiler chicks', 950, document.getElementById('quantity2').value)">Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="local feed.jpeg" alt="High-quality local feed">
+                <h3>High-quality feeds</h3>
+                <p>₦18,000 / 25kg (bag)</p>
+                <label for="quantity3">Quantity:</label>
+                <input type="number" id="quantity3" min="1" value="1">
+                <button onclick="addToCart('High-quality feeds', 18000, document.getElementById('quantity3').value)">Add to Cart</button>
+            </div>
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src="hendrix.jpeg" alt="Local feed">
+                <h3>hendrix concentrate</h3>
+                <p>₦2,000 / (1kg)</p>
+                <label for="quantity4">Quantity:</label>
+                <input type="number" id="quantity4" min="1" value="1">
+                <button onclick="addToCart('hendrix concentrate', 2000, document.getElementById('quantity4').value)">Add to Cart</button>
+            </div>
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="chikun feed.jpeg" alt="Chikun feed">
+                <h3>Chikun feed</h3>
+                <p>₦21,400</p>
+                <label for="quantity5">Quantity:</label>
+                <input type="number" id="quantity5" min="1" value="1">
+                <button onclick="addToCart('Chikun feed', 21400, document.getElementById('quantity5').value)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items">
+            <p>Your cart is empty.</p>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <section id="shipping">
+        <h2>Shipping Information</h2>
+        <div class="form-container">
+            <form action=" https://formspree.io/f/xjkbzeee" method="POST">
+                <label for="fullname">Full Name:</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+              <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+
+<label for="message">Message:</label>
+                <input type="text" id="message" name="Message" required>
+
+                <label for="address">Shipping Address:</label>
+                <textarea id="address" name="address" rows="4" required></textarea>
+
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,15}">
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="country">Country:</label>
+                <select id="country" name="country" required>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="canada">CANADA</option>
+                    <option value="nigeria">NIGERIA</option>
+                    <option value="ghana">GHANA</option>			<option value="china">CHINA</option>			<option value="kenya">KENYA</option>			<option value="india">INDIA</option>
+
+                </select>
+
+                <input type="submit" value="Submit Order">
+            </form>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 jarbless farms. All rights reserved.</p>
+</footer>
+
+<!-- Include Paystack Script -->
+<script src="https://js.paystack.co/v1/inline.js"></script>
+
+<script>
+    let cart = [];
+
+    function addToCart(productName, price, quantity) {
+        cart.push({ productName, price, quantity });
+        displayCart();
+    }
+
+    function displayCart() {
+        const cartItemsDiv = document.getElementById('cart-items');
+        if (cart.length === 0) {
+            cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';
+        } else {
+            const cartHtml = cart.map(item => 
+                `<li>${item.productName} - ₦${item.price} x ${item.quantity} = ₦${item.price * item.quantity}</li>`
+            ).join('');
+            cartItemsDiv.innerHTML = `<ul>${cartHtml}</ul>`;
+        }
+    }
+
+    function checkout() {
+        if (cart.length === 0) {
+            alert('Your cart is empty.');
+            return;
+        }
+        
+        // Calculate the total amount
+        let totalAmount = cart.reduce((sum, item) => sum + item.price * item.quantity, 0) * 100; // In kobo
+
+        // Get customer details (dummy values for now, should be replaced with actual inputs)
+        let email = "customer@example.com";
+        let phone = "08012345678";
+        
+        // Paystack payment initialization
+        var handler = PaystackPop.setup({
+            key: 'pk_live_647dd489011ae505fd4820b8963997ee6c19d8ac', // Your public key
+            email: email,
+            amount: totalAmount,
+            currency: "NGN",
+            ref: 'poultryRawMaterials-' + Math.floor((Math.random() * 1000000000) + 1), // Generates a unique reference
+            callback: function(response) {
+                alert('Payment successful. Transaction ref is ' + response.reference);
+                // Redirect or take other actions here
+            },
+            onClose: function() {
+                alert('Payment was not completed.');
+            }
+        });
+        handler.openIframe();
+    }
+
+</script>
+
+</body>
+</html>
